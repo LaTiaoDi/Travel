@@ -2,7 +2,7 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
-      <li class="item" v-for="item of recommendList" :key='item.id'>
+      <li class="item" v-for="item of list" :key='item.id'>
         <img
           class="item-img"
           :src="item.imgUrl"
@@ -21,31 +21,12 @@
 <script>
 export default {
   name: "recommend",
+  props:{
+			list:Array
+		},
   data() {
     return {
-      recommendList: [
-       {
-          id: '0001',
-          imgUrl:'//imgs.qunarzz.com/p/p70/1809/e7/4941057a6aae702.jpg_256x160_9fee6ccb.jpg',
-          title:'惊险有趣的大型斗兽表演',
-        desc:'惊险有趣的大型斗兽表演惊险有趣的大型斗兽表演'
-        },{
-          id: '0002',
-          imgUrl:'//imgs.qunarzz.com/p/p70/1809/e7/4941057a6aae702.jpg_256x160_9fee6ccb.jpg',
-          title:'惊险有趣的大型斗兽表演',
-        desc:'惊险有趣的大型斗兽表演惊险有趣的大型斗兽表演'
-        },{
-          id: '0003',
-          imgUrl:'//imgs.qunarzz.com/p/p70/1809/e7/4941057a6aae702.jpg_256x160_9fee6ccb.jpg',
-          title:'惊险有趣的大型斗兽表演',
-        desc:'惊险有趣的大型斗兽表演惊险有趣的大型斗兽表演'
-        },{
-          id: '0004',
-          imgUrl:'//imgs.qunarzz.com/p/p70/1809/e7/4941057a6aae702.jpg_256x160_9fee6ccb.jpg',
-          title:'惊险有趣的大型斗兽表演',
-        desc:'惊险有趣的大型斗兽表演惊险有趣的大型斗兽表演'
-        },
-      ]
+      
     };
   }
 };

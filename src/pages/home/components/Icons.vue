@@ -1,6 +1,6 @@
 <template>
     <div class="icons">
-        <div class="icon" v-for="item of iconList" :key='item.id'>
+        <div class="icon" v-for="item of ilist" :key='item.id'>
             <div class="icon-img">
                 <img class="icon-img-content" :src="item.imgUrl" :alt="item.desc">
             </div>
@@ -12,43 +12,12 @@
 <script>
 export default {
     name:'icons',
+    props:{
+			ilist:Array
+		},
     data:function(){
         return {
-            iconList: [
-                {
-                id:'001',
-                imgUrl:'//s.qunarzz.com/homenode/images/touchheader/train.png'
-                ,desc:'自由女神'
-                }, {
-                id:'002',
-                imgUrl:'//s.qunarzz.com/homenode/images/touchheader/train.png'
-                ,desc:'自由女神'
-                }, {
-                id:'003',
-                imgUrl:'//s.qunarzz.com/homenode/images/touchheader/train.png'
-                ,desc:'自由女神'
-                }, {
-                id:'004',
-                imgUrl:'//s.qunarzz.com/homenode/images/touchheader/train.png'
-                ,desc:'自由女神'
-                }, {
-                id:'005',
-                imgUrl:'//s.qunarzz.com/homenode/images/touchheader/train.png'
-                ,desc:'自由女神'
-                }, {
-                id:'006',
-                imgUrl:'//s.qunarzz.com/homenode/images/touchheader/train.png'
-                ,desc:'自由女神'
-                }, {
-                id:'007',
-                imgUrl:'//s.qunarzz.com/homenode/images/touchheader/train.png'
-                ,desc:'自由女神'
-                }, {
-                id:'008',
-                imgUrl:'//s.qunarzz.com/homenode/images/touchheader/train.png'
-              ,desc:'自由女神'
-              },
-            ]
+           
         }
     }
 }
