@@ -1,11 +1,15 @@
 <template>
  <div>
-   <h1>欢迎来到首页</h1>
+<home-header></home-header>
  </div>
 </template>
 <script>
+import HomeHeader from './components/header'
 export default {
   name: 'HelloWorld',
+  components:{
+    HomeHeader
+  },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
